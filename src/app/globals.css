@@ -2,53 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-@layer base{
-    html, body { 
-        width: 100%;
-        overflow-x: hidden; 
-    }
-    
-    h1 {
-        @apply font-black md:text-4xl text-2xl
-    }
-    
-    h2 {
-        @apply font-black md:text-2xl text-lg
-    }
-    
-    h3 {
-        @apply font-black text-base
-    }
-    
-    p {
-        @apply font-semibold md:text-lg text-base mb-[1rem]
-    }
+  h1 {
+    @apply font-black md:text-4xl text-2xl;
+  }
 
-    span{
-        @apply font-semibold md:text-lg text-base
-    }
-    
-    a {
-        @apply text-blue-400 cursor-pointer
-    }
+  h2 {
+    @apply font-black md:text-2xl text-lg;
+  }
+
+  h3 {
+    @apply font-black text-base;
+  }
+
+  span {
+    @apply font-semibold md:text-lg text-base;
+  }
+
+  a {
+    @apply text-blue-400 cursor-pointer;
+  }
 }
 
-@layer components{
-    .container-header{
-        @apply lg:container lg:mx-auto px-10
-    }
-    .container-base{
-        @apply lg:container lg:mx-auto pl-10 pr-10 md:pr-16
-    }
-    .cursor-link{
-        @apply transition delay-100 cursor-pointer font-bold text-sky-500 hover:text-sky-700
-    }
+@layer components {
+  .container-header {
+    @apply lg:container lg:mx-auto px-10;
+  }
+  .container-base {
+    @apply lg:container lg:mx-auto pl-10 pr-10 md:pr-16;
+  }
+  .cursor-link {
+    @apply hover:border-b-2 border-red-600 cursor-pointer;
+  }
 }
 
-@layer utilities{
-    .text-justify-right{
-        text-align: justify;
-        text-align-last: right; 
-    }
+@layer utilities {
+  .text-justify-right {
+    text-align: justify;
+    text-align-last: right;
+  }
 }
