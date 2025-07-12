@@ -14,7 +14,7 @@ export default function Footer() {
       />
       <div className="text-white w-4/12">
         <p>Cempaka Putih Barat XI Blok J19, Jakarta Pusat</p>
-        <button className="flex flex-row items-center w-fit border-2 border-white rounded-full py-1 px-4 text-left text-sm">
+        <a href={"https://wa.me/628121029668"} rel="noreferrer" target="_blank" className="flex flex-row items-center w-fit border-2 border-white rounded-full py-1 px-4 text-left text-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -27,8 +27,8 @@ export default function Footer() {
               clipRule="evenodd"
             />
           </svg>
-          Let's discuss +628121029668
-        </button>
+          Let&apos;s discuss +628121029668
+        </a>
       </div>
       <div className="flex flex-col gap-2 text-white w-4/12">
         <div className="flex flex-row">
