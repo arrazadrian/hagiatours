@@ -20,13 +20,13 @@ export default function WhyUs() {
   ];
 
   return (
-    <div className="relative flex flex-col px-10 py-20 bg-cover bg-[url('/images/asset_3(8).jpeg')]">
+    <div className="relative flex flex-col px-3 md:px-10 py-10 md:py-20 bg-cover bg-[url('/images/asset_3(8).jpeg')]">
       <div className="absolute z-100 inset-0 bg-red-900 opacity-50"></div>
       <div className="z-10 ">
         <p className="text-white text-5xl mb-5 underline text-center font-semibold">
           Why Hagia Tours?
         </p>
-        <div className="flex flex-row justify-between items-center  m-auto ">
+        <div className="flex flex-col md:flex-row justify-between items-center m-auto gap-3">
           {reason_list.map((item, index) => {
             return (
               <CardWhyUs

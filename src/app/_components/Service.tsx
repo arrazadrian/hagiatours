@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Service() {
   return (
-    <div className="flex flex-row mx-auto items-center w-screen h-[500px] justify-between gap-5 px-10 my-10">
-      <div className="flex flex-row w-6/12 h-[500px] gap-5">
+    <div className="flex flex-col md:flex-row mx-auto items-center w-screen h-fit md:h-[500px] justify-between gap-5 px-3 md:px-10 my-10">
+      <div className="flex flex-row w-full md:w-6/12 h-[500px] gap-5">
         <div className=" flex flex-col relative w-[50%] h-[100%]] gap-5">
           <div className="flex items-center justify-center relative w-[100%] h-[50%] bg-cover bg-[url('/images/asset_3(3).jpeg')] rounded-xl">
             <span className="text-white text-3xl text-center">
@@ -28,7 +28,7 @@ export default function Service() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-6/12 h-full justify-between">
+      <div className="flex flex-col w-full md:w-6/12 h-full justify-between">
         <div className="w-[100%] flex flex-col mb-3 gap-2">
           <span className="text-4xl sm:text-6xl underline decoration-solid decoration-red-600 decoration-8">
             Service
