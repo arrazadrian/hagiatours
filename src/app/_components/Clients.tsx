@@ -26,6 +26,10 @@ export default function Clients() {
       path: "/logo_&_icon/pertamina.jpg",
       alt: "pertamina",
     },
+    {
+      path: "/logo_&_icon/provetic.jpg",
+      alt: "provetic",
+    },
   ];
 
   return (
@@ -33,12 +37,12 @@ export default function Clients() {
       <h1 className="font-semibold underline decoration-red-600 decoration-4">
         Trusted by Big Companies
       </h1>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-3">
         {client_list.map((item, index) => {
           return (
             <div
               key={index}
-              className="relative h-[80px] md:h-[200px] w-[180px] md:w-[400px]"
+              className="relative h-[80px] md:h-[200px] w-[180px] md:w-[300px]"
             >
               <Image
                 src={item.path}
