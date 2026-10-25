@@ -1,60 +1,50 @@
 import Image from "next/image";
 
-export default function Clients() {
-  const client_list = [
-    {
-      path: "/logo_&_icon/mbf.jpg",
-      alt: "mbf",
-    },
-    {
-      path: "/logo_&_icon/infion.png",
-      alt: "infion",
-    },
-    {
-      path: "/logo_&_icon/itrc.png",
-      alt: "intercipta",
-    },
-    {
-      path: "/logo_&_icon/telkom.jpeg",
-      alt: "telkom",
-    },
-    {
-      path: "/logo_&_icon/novell.png",
-      alt: "novell",
-    },
-    {
-      path: "/logo_&_icon/pertamina.jpg",
-      alt: "pertamina",
-    },
-    {
-      path: "/logo_&_icon/provetic.jpg",
-      alt: "provetic",
-    },
-  ];
+type Client = {
+  path: string;
+  alt: string;
+};
 
+const CLIENT_LIST: Client[] = [
+  { path: "/logo_&_icon/mbf.jpg", alt: "MBF" },
+  { path: "/logo_&_icon/infion.png", alt: "Infion" },
+  { path: "/logo_&_icon/itrc.png", alt: "Intercipta" },
+  { path: "/logo_&_icon/telkom.jpeg", alt: "Telkom" },
+  { path: "/logo_&_icon/novell.png", alt: "Novell" },
+  { path: "/logo_&_icon/pertamina.jpg", alt: "Pertamina" },
+  { path: "/logo_&_icon/provetic.jpg", alt: "Provetic" },
+  { path: "/logo_&_icon/prodia.jpeg", alt: "Prodia" },
+];
+
+export default function Clients() {
   return (
-    <div className="flex flex-col p-10 w-11/12 mx-auto">
-      <h1 className="font-semibold underline decoration-red-600 decoration-4">
+    <section
+      aria-labelledby="clients-heading"
+      className="flex w-11/12 flex-col p-10 mx-auto"
+    >
+      <h2
+        id="clients-heading"
+        className="text-4xl leading-tight sm:text-6xl font-semibold underline decoration-red-600 decoration-4"
+      >
         Trusted by Big Companies
-      </h1>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-3">
-        {client_list.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="relative h-[80px] md:h-[200px] w-[180px] md:w-[300px]"
-            >
-              <Image
-                src={item.path}
-                alt={item.alt}
-                fill
-                priority
-                style={{ objectFit: "contain", objectPosition: "center" }}
-              />
-            </div>
-          );
-        })}
-      </div>
-    </div>
+      </h2>
+
+      <ul className="mt-6 flex flex-wrap justify-center items-center gap-3">
+        {CLIENT_LIST.map((client) => (
+          <li
+            key={client.path}
+            className="relative h-[80px] w-[180px] md:h-[200px] md:w-[300px]"
+          >
+            <Image
+              src={client.path}
+              alt={client.alt}
+              fill
+              sizes="(max-width: 768px) 180px, 300px"
+              className="object-contain object-center"
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
